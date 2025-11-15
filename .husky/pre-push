@@ -1,0 +1,4 @@
+#!/bin/sh
+npx prettier --check src
+npx eslint src --max-warnings 0
+npx vitest --run
