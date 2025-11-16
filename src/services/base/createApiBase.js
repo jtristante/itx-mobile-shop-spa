@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const DEFAULT_CACHE_SECONDS = 3600;
 export const DEFAULT_TIMEOUT = 10000;
