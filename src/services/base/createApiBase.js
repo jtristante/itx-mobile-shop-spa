@@ -1,12 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-export const DEFAULT_CACHE_SECONDS = 3600;
-export const DEFAULT_TIMEOUT = 10000;
-export const DEFAULT_BASE_URL = 'https://itx-frontend-test.onrender.com/';
+import { globalVariables } from '../../config/globalVariables.js';
 
 export const customBaseQuery = fetchBaseQuery({
-  baseUrl: DEFAULT_BASE_URL,
-  timeout: DEFAULT_TIMEOUT,
+  baseUrl: globalVariables.VITE_API_BASE_URL,
+  timeout: globalVariables.VITE_DEFAULT_TIMEOUT,
 });
 
 export function createApiBase({ endpoints, ...rest }) {
@@ -17,12 +14,12 @@ export function createApiBase({ endpoints, ...rest }) {
       const wrappedBuilder = Object.assign({}, builder, {
         query: (config) =>
           builder.query({
-            keepUnusedDataFor: DEFAULT_CACHE_SECONDS,
+            keepUnusedDataFor: globalVariables.VITE_DEFAULT_CACHE_SECONDS,
             ...config,
           }),
         mutation: (config) =>
           builder.mutation({
-            keepUnusedDataFor: DEFAULT_CACHE_SECONDS,
+            keepUnusedDataFor: globalVariables.VITE_DEFAULT_CACHE_SECONDS,
             ...config,
           }),
       });
