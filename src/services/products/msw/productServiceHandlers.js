@@ -1,10 +1,7 @@
 import { HttpResponse, http } from 'msw';
 
-
-
 import { MOCK_PRODUCTS } from './mocks/mockGetProduct.js';
 import { MOCK_PRODUCT_DETAIL } from './mocks/mockGetProductDetail.js';
-
 
 export const GET_PRODUCTS_HANDLER = http.get('*/api/product', () => {
   return HttpResponse.json(MOCK_PRODUCTS);

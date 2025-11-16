@@ -15,6 +15,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'happy-dom',
+    setupFiles:['src/test/setupTests.js'],
     exclude: [...configDefaults.exclude, 'packages/template/*'],
     include: ['src/**/*.{test,spec}.{js,jsx}'],
   },
