@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import cartSlice from '../features/cart/cartSlice.js';
-import { productApi } from '../services/products/productApi.js';
 import { cartApi } from '../services/cart/cartApi.js';
+import { productApi } from '../services/products/productApi.js';
 
 export function createTestStore() {
   return configureStore({

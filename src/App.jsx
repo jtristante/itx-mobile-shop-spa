@@ -1,23 +1,19 @@
-import { useDispatch, useSelector } from 'react-redux';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { setNumberOfItems } from './features/cart/cartSlice.js';
+import { ProductListPage } from './pages/product/List/ProductListPage.jsx';
+import { ProductDetailsPage } from './pages/product/Details/ProductDetailsPage.jsx';
+import { MainLayout } from './layouts/MainLayout.jsx';
 
 function App() {
-  const count = useSelector((state) => state.cart.numberOfItems);
-  const dispatch = useDispatch();
-
-  const handleAddItem = () => {
-    dispatch(setNumberOfItems(count + 1));
-  };
-
   return (
-    <>
-      <h1>Testing Redux Cart State</h1>
-      <div className="card">
-        <button onClick={handleAddItem}>{count} cart items</button>
-      </div>
-    </>
+    <BrowserRouter>
+      <MainLayout>
+        <Routes>
+          <Route path="/spa/" element={<ProductListPage />} />
+          <Route path="/spa/product/:productId" element={<ProductDetailsPage />} />
+        </Routes>
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "START": "cross-env VITE_MSW=true vite",
+    "START": "cross-env VITE_MSW=true vite --open /spa/",
     "BUILD": "vite build",
     "LINT": "eslint src --max-warnings 0",
     "TEST": "vitest",
@@ -14,7 +14,8 @@
     "@reduxjs/toolkit": "2.10.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-redux": "9.2.0"
+    "react-redux": "9.2.0",
+    "react-router-dom": "7.9.6"
   },
   "devDependencies": {
     "@eslint/js": "9.39.1",

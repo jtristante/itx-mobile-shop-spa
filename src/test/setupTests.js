@@ -1,4 +1,5 @@
-import { beforeAll, afterAll, afterEach } from 'vitest';
+import { afterAll, afterEach, beforeAll } from 'vitest';
+
 import { server } from '../msw/server.js';
 
 // Start MSW
