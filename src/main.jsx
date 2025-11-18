@@ -1,11 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { Provider } from 'react-redux';
+import { ThemeProvider } from 'next-themes';
+import { Provider as ReduxProvider } from 'react-redux';
 
 import App from './App.jsx';
 import { store } from './app/store.js';
-import './index.css';
+import { Provider as ChakraProvider } from '@/components/ui/provider';
 
 const container = document.getElementById('root');
 
@@ -26,9 +27,11 @@ async function enableMocking() {
 enableMocking().then(() => {
   createRoot(container).render(
     <StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <ReduxProvider store={store}>
+        <ChakraProvider forcedTheme="ligth">
+          <App />
+        </ChakraProvider>
+      </ReduxProvider>
     </StrictMode>,
   );
 });

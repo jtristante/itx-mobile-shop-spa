@@ -4,16 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "START": "cross-env VITE_MSW=true vite --open /spa/",
+    "START": "cross-env VITE_MSW=true vite --open /home/",
     "BUILD": "vite build",
     "LINT": "eslint src --max-warnings 0",
     "TEST": "vitest",
     "PRETTIER": "prettier --write --cache src"
   },
   "dependencies": {
+    "@chakra-ui/react": "3.29.0",
+    "@emotion/react": "11.14.0",
     "@reduxjs/toolkit": "2.10.1",
+    "next-themes": "0.4.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-icons": "5.5.0",
     "react-redux": "9.2.0",
     "react-router-dom": "7.9.6"
   },
@@ -26,7 +30,7 @@
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
-    "@vitejs/plugin-react": "5.1.0",
+    "@vitejs/plugin-react": "5.1.1",
     "babel-plugin-react-compiler": "1.0.0",
     "cross-env": "10.1.0",
     "eslint": "9.39.1",
@@ -38,7 +42,9 @@
     "husky": "9.1.7",
     "msw": "2.12.2",
     "prettier": "3.6.2",
+    "sass": "1.94.0",
     "vite": "7.2.2",
+    "vite-tsconfig-paths": "5.1.4",
     "vitest": "4.0.9"
   },
   "msw": {

@@ -10,4 +10,3 @@ afterEach(() => server.resetHandlers());
 
 // Cleanup
 afterAll(() => server.close());
-

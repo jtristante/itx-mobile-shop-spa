@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { useGetProductsQuery } from '../../../services/products/productApi.js';
+import { useGetProductsQuery } from '@/services/products/productApi.js';
 
 export const ProductListPage = () => {
   const { data: products, error, isLoading } = useGetProductsQuery();
@@ -14,7 +14,7 @@ export const ProductListPage = () => {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <Link to={`/spa/product/${product.id}`}>
+            <Link to={`/home/product/${product.id}`}>
               {product.brand} {product.model} - ${product.price}
             </Link>
           </li>

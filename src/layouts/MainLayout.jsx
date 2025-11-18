@@ -1,7 +1,9 @@
+import { Header } from '@/sharedComponents/header/Header.jsx';
+
 export const MainLayout = ({ children }) => {
   return (
     <div className={'appContanier'}>
-      {/*TODO Add The header*/}
+      <Header />
       <main>{children}</main>
     </div>
   );

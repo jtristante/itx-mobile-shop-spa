@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
 import { globalVariables } from '../../config/globalVariables.js';
 
 export const customBaseQuery = fetchBaseQuery({
